@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolios Isabel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+<div class="contenedor fondo">
+    <h1>Bienvenidos a mi Portafolio</h1>
+</div>
+
+<div class="contenedor fondo">
+    <h2>Mis Proyectos</h2>
+    <p>Soy una estudiante, mis proyectos son sencillos, pero me estoy cultivando para poder ejercer en este sector.</p>
+</div>
+
+<div class="contenedor fondo">
+    <h2>Videos</h2>
+    <p>Aqui os muestro un estilo life, con la esencia del Mar.</p>
+    <video src="media/Mar.mp4" controls controlsList="nodownload"></video>
+    <p>Este es un ejemplo de Meme.</p>
+    <video src="media/Meme.mp4" controls controlsList="nodownload"></video>
+    <p>Cuenta atras...</p>
+    <video src="media/Ranking.mp4" controls controlsList="nodownload"></video>
+    <p>Es un Anuncio de Asturias.</p>
+    <video src="media/Anuncio Asturias.mp4" controls controlsList="nodownload"></video>
+</div>
+
+<div class="contenedor fondo">
+    <h2>Imagenes</h2>
+    <p>Aqui os presento un ejemplo de un anuncio, con interacion (Genially).</p>
+    <div class="ajustar">
+        <iframe title="Hotel Versalles" frameborder="0" allowfullscreen
+        src="https://view.genially.com/67ecfc693ae507c7a548b583"></iframe>
+    </div>
+    <p>Presentacion con Interacion, mostrando Cunit.</p>
+    <div class="ajustar">
+        <iframe title="Cunit" frameborder="0" allowfullscreen
+        src="https://view.genially.com/67d28ecace0fabc27935e044"></iframe>
+    </div>
+    <p>Imagen Noche y Dia (Photopea).</p>
+    <img src="media/Proyecto Dia y Noche.jpg" alt="Proyecto Noche y Día">
+</div>
+
+<div class="contenedor fondo">
+    <h2>3D o Metaversos</h2>
+    <p>Os presento mi Portafolios en un mundo virtual.</p>
+    <div class="ajustar">
+        <iframe width="640" height="500" frameBorder="0" src="https://edu.delightex.com/JHV-MQA"></iframe>
+        <p>Habitaciones en 3D Comedor.</p>
+        <a href="https://www.tinkercad.com/things/eM400lnKipa-habitacion-comedor">Diseño de tinkercad</a>
+        <p>Habitaciones en 3D Cocina.</p>
+        <a href="https://www.tinkercad.com/things/8DkHmlUU9yD-cocina">Diseño de tinkercad</a>
+    </div>
+</div>
+
+<div class="contenedor fondo">
+    <h2>Museo Virtual</h2>
+    <iframe width="560" height="315" src="https://www.artsteps.com/embed/67e17750991bbda8ceb817e9/560/315" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="contenedor fondo">
+    <h2>Contacto Directo</h2>
+    <p><strong>Nombre:</strong> Isabel Pérez</p>
+    <p><strong>Teléfono:</strong> <a class="telefono" href="tel:+34622426663">+34 622 426 663</a></p>
+    <p><a class="whatsapp" href="https://wa.me/34622426663" target="_blank">📞 Escríbeme por WhatsApp</a></p>
+</div>
+
+<div class="contenedor fondo">
+    <h2>Ubicación</h2>
+    <div id="map"></div>
+</div>
+
+<script>
+var map = L.map('map').setView([41.21563546700196, 1.6424266739007818], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([41.19798785839587, 1.6269956206190657])
+  .addTo(map)
+  .bindPopup("<b>Estamos aquí</b><br>Visítanos cuando quieras.")
+  .openPopup();
+</script>
+
+</body>
+</html>
